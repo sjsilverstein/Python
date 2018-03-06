@@ -137,16 +137,16 @@
 # Write a program that takes a list of strings and a string containing a single character, 
 # and prints a new list of all the strings containing that character.
 
-def findChar(word_list, chara):
-	new_list = [];
-	for i in range(0, len(word_list)):
-		for j in range(0, len(word_list[i])):
-			if word_list[i][j] == chara:
-				new_list.append(word_list[i])
-				break
-	print new_list
+# def findChar(word_list, chara):
+# 	new_list = [];
+# 	for i in range(0, len(word_list)):
+# 		for j in range(0, len(word_list[i])):
+# 			if word_list[i][j] == chara:
+# 				new_list.append(word_list[i])
+# 				break
+# 	print new_list
 
-word_l = ['hello','world','my','name','is','Anna']
-checker = 'o'
+# word_l = ['hello','world','my','name','is','Anna']
+# checker = 'o'
 
-findChar(word_l, checker)
+# findChar(word_l, checker)

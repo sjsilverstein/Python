@@ -115,21 +115,38 @@
 # Your program should be able to accept and compare two lists: list_one and list_two. If both lists are identical print "The lists are the same". 
 # If they are not identical print "The lists are not the same." Try the following test cases for lists one and two:
 
-def listChecker(lOne, lTwo):
-	if lOne == lTwo:
-		print "The lists are the same."
-	else:
-		print "The lists are not the same."
+# def listChecker(lOne, lTwo):
+# 	if lOne == lTwo:
+# 		print "The lists are the same."
+# 	else:
+# 		print "The lists are not the same."
 
-list_one = [1,2,5,6,2]
-list_two = [1,2,5,6,2]
-listChecker(list_one, list_two)
-list_one = [1,2,5,6,5]
-list_two = [1,2,5,6,5,3]
-listChecker(list_one, list_two)
-list_one = [1,2,5,6,5,16]
-list_two = [1,2,5,6,5]
-listChecker(list_one, list_two)
-list_one = ['celery','carrots','bread','milk']
-list_two = ['celery','carrots','bread','cream']
-listChecker(list_one, list_two)
+# list_one = [1,2,5,6,2]
+# list_two = [1,2,5,6,2]
+# listChecker(list_one, list_two)
+# list_one = [1,2,5,6,5]
+# list_two = [1,2,5,6,5,3]
+# listChecker(list_one, list_two)
+# list_one = [1,2,5,6,5,16]
+# list_two = [1,2,5,6,5]
+# listChecker(list_one, list_two)
+# list_one = ['celery','carrots','bread','milk']
+# list_two = ['celery','carrots','bread','cream']
+# listChecker(list_one, list_two)
+
+# Write a program that takes a list of strings and a string containing a single character, 
+# and prints a new list of all the strings containing that character.
+
+def findChar(word_list, chara):
+	new_list = [];
+	for i in range(0, len(word_list)):
+		for j in range(0, len(word_list[i])):
+			if word_list[i][j] == chara:
+				new_list.append(word_list[i])
+				break
+	print new_list
+
+word_l = ['hello','world','my','name','is','Anna']
+checker = 'o'
+
+findChar(word_l, checker)

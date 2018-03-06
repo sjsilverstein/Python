@@ -85,28 +85,51 @@
 # concatenate it onto a new string. If it is a number, add it to a running sum. At the end of your program print the string, 
 # the number and an analysis of what the list contains. If it contains only one type, print that type, otherwise, print 'mixed'.
 
-def arrType(arr):
-	typeInt = False
-	typeStr = False
-	intSum = 0
-	strTotal = ""
-	for idx in range(0, len(arr)):
-		if isinstance(arr[idx], int):
-			intSum+=arr[idx]
-			typeInt = True
-		if isinstance(arr[idx], str):
-			strTotal+=arr[idx]
-			typeStr = True
-	if typeInt == True and typeStr == True:
-		print "The list you entered is of mixed type"
-		print "String:"+strTotal
-		print "Sum:" + str(intSum)
-	elif typeInt == True:
-		print "The list you entered is of integer type"
-		print "Sum:" + str(intSum)
-	else:
-		print "The list you entered is of string type"
-		print "String:"+ strtotal
-l = ['magical unicorns',19,'hello',98.98,'world']
-arrType(l)
+# def arrType(arr):
+# 	typeInt = False
+# 	typeStr = False
+# 	intSum = 0
+# 	strTotal = ""
+# 	for idx in range(0, len(arr)):
+# 		if isinstance(arr[idx], int):
+# 			intSum+=arr[idx]
+# 			typeInt = True
+# 		if isinstance(arr[idx], str):
+# 			strTotal+=arr[idx]
+# 			typeStr = True
+# 	if typeInt == True and typeStr == True:
+# 		print "The list you entered is of mixed type"
+# 		print "String:"+strTotal
+# 		print "Sum:" + str(intSum)
+# 	elif typeInt == True:
+# 		print "The list you entered is of integer type"
+# 		print "Sum:" + str(intSum)
+# 	else:
+# 		print "The list you entered is of string type"
+# 		print "String:"+ strtotal
+# l = ['magical unicorns',19,'hello',98.98,'world']
+# arrType(l)
 
+# Write a program that compares two lists and prints a message depending on if the inputs are identical or not.
+
+# Your program should be able to accept and compare two lists: list_one and list_two. If both lists are identical print "The lists are the same". 
+# If they are not identical print "The lists are not the same." Try the following test cases for lists one and two:
+
+def listChecker(lOne, lTwo):
+	if lOne == lTwo:
+		print "The lists are the same."
+	else:
+		print "The lists are not the same."
+
+list_one = [1,2,5,6,2]
+list_two = [1,2,5,6,2]
+listChecker(list_one, list_two)
+list_one = [1,2,5,6,5]
+list_two = [1,2,5,6,5,3]
+listChecker(list_one, list_two)
+list_one = [1,2,5,6,5,16]
+list_two = [1,2,5,6,5]
+listChecker(list_one, list_two)
+list_one = ['celery','carrots','bread','milk']
+list_two = ['celery','carrots','bread','cream']
+listChecker(list_one, list_two)
